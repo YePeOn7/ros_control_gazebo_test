@@ -101,7 +101,7 @@
       <child link="${prefix}_wheel_link" />
       <origin xyz="${xyz}" rpy="${rpy}" />
       <axis xyz="0 0 1" />
-      <!-- <dynamics damping="0.1" friction="0.05"/> -->
+      <dynamics damping="0.1" friction="0.1"/>
     </joint>
 
     <!-- Link -->
