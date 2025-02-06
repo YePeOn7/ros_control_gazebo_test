@@ -2,6 +2,13 @@
 
 ## Steps to run
 
+Cloning to your catkin workspace src
+
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/YePeOn7/ros_control_gazebo_test.git
+```
+
 Please run each command in separate console
 
 ### 1. Launching Gazebo with empty world
