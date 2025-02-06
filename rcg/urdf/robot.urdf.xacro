@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find rcg)/urdf/wheel.urdf.xacro" />
+  <xacro:include filename="$(find rcg)/urdf/base.urdf.xacro" />
+  <xacro:property name="wheel_radius" value="0.25" />
+
+  <xacro:base />
+  <xacro:wheel_velocity prefix="first" parent="base_link" xyz="-0.55 0 0.1" rpy="0 0 0" />
+  <xacro:wheel_position prefix="second" parent="base_link" xyz="0 0 0.1" rpy="0 0 0" />
+  <xacro:wheel_torque prefix="third" parent="base_link" xyz="0.55 0 0.1" rpy="0 0 0" />
+
+  <!-- Gazebo -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>test_robot</robotNamespace>
+    </plugin>
+  </gazebo>
+</robot>

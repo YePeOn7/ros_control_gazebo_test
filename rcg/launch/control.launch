@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+<group ns="test_robot">
+  <rosparam file="$(find rcg)/config/controller.yaml" command="load" />
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen"
+    args="joint_state_controller first_wheel_controller second_wheel_controller third_wheel_controller" />
+</group>
+</launch>
